@@ -37,3 +37,12 @@ enabled=1
 
 ### Install with this command
 sudo dnf install winehq-staging-8.20-1.2 --allowerasing
+
+
+### Added this for low memory lock issue
+@audio   -  rtprio     95
+@audio   -  memlock    unlimited
+@realtime - rtprio     95
+@realtime - memlock    unlimited
+
+In file => /etc/security/limits.conf
