@@ -45,8 +45,9 @@ sudo dnf install winehq-staging-8.20-1.2 --allowerasing
 @realtime - rtprio     95
 @realtime - memlock    unlimited
 
+In file => /etc/security/limits.conf
+
 ### Disable rtkit daemon 
 sudo systemctl disable --now rtkit-daemon
 
 
-In file => /etc/security/limits.conf
