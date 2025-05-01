@@ -21,3 +21,19 @@ sudo dnf versionlock add winehq-staging
 
 ### Remove the version lock
 sudo dnf versionlock delete winehq-staging
+
+## Manually add the repo in fedora
+
+sudo nano /etc/yum.repos.d/winehq.repo
+
+## Add this content
+[WineHQ]
+name=WineHQ packages
+type=rpm-md
+baseurl=https://dl.winehq.org/wine-builds/fedora/38
+gpgcheck=1
+gpgkey=https://dl.winehq.org/wine-builds/winehq.key
+enabled=1
+
+### Install with this command
+sudo dnf install winehq-staging-8.20-1.2 --allowerasing
