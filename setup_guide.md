@@ -19,5 +19,5 @@ wine-8.10
 ### Lock the version
 sudo dnf versionlock add winehq-staging
 
-### remove the version lock
+### Remove the version lock
 sudo dnf versionlock delete winehq-staging
